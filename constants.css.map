@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAqBA,OAAO,CAAC,gFAAI",
+    "sources": [
+        "constants.scss"
+    ],
+    "names": [],
+    "file": "constants.css"
+}
