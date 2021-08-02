@@ -1,162 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bienes Raíces</title>
-    <link rel="stylesheet" href="./main.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <header>
-      <div>
-        <img src="./images/logo.svg" alt="logo" />
-        <img id="menu-icon" src="./images/menu.svg" alt="menu-hamburguesa" />
-        <nav id="main-nav">
-          <ul>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Anuncios</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-      <h1>venta de casas y departamentos exclusivos de lujo</h1>
-    </header>
-    <section>
-      <h2>mas sobre nosotros</h2>
-      <div>
-        <img src="./images/icono1.svg" alt="seguridad" />
-        <h3>seguridad</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, tempore
-          quasi! Quod quibusdam ratione, dolores amet et saepe consequatur
-          cumque quaerat architecto deleniti accusamus error dolorem tempora.
-          Culpa, magnam. Eum.
-        </p>
-      </div>
-      <div>
-        <img src="./images/icono2.svg" alt="dinero" />
-        <h3>el mejor precio</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-          adipisci optio omnis, culpa esse, nemo nobis, asperiores magnam
-          distinctio vitae quam modi nesciunt expedita rerum itaque ut ullam
-          dolore unde!
-        </p>
-      </div>
-      <div>
-        <img src="./images/icono3.svg" alt="tiempo" />
-        <h3>a tiempo</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam omnis
-          beatae nemo labore quas maiores, maxime aspernatur magni modi. Nihil
-          tempora vel soluta earum laborum suscipit quo, quos nemo repellendus!
-        </p>
-      </div>
-    </section>
-    <main>
-      <h2>casas y departamentos en venta</h2>
-      <article>
-        <img src="./images/anuncio1.jpg" alt="casa de lago" />
-        <h3>casa de lujo en el lago</h3>
-        <p>
-          casa de lago con excelente vista, acabados de lujo a un excelente
-          precio.
-        </p>
-        <p class="precio">U$S350.000</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienes Raíces</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__top">
+      <img class="header__top--logo" src="./images/logo.svg" alt="logo" />
+      <img class="header__top--icon" id="menu-icon" src="./images/menu.svg" alt="menu-hamburguesa" />
+      <nav class="header__top--nav" id="nav-res">
         <ul>
-          <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-          <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento"/></li>3
-          <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
-        </ul>
-        <div class="link"><a href="#">ver propiedad</a></div>
-      </article>
-      <article>
-        <img src="./images/anuncio2.jpg" alt="casa de lujo" />
-        <h3>casa terminada de lujo</h3>
-        <p>
-          casa con diseño moderno, asi como tecnologia inteligente y amueblada.
-        </p>
-        <p class="precio">U$S275.000</p>
-        <ul>
-          <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-          <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento"/></li>3
-          <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
-        </ul>
-        <div class="link"><a href="#">ver propiedad</a></div>
-      </article>
-      <article>
-        <img src="./images/anuncio3.jpg" alt="casa pileta" />
-        <h3>casa con pileta</h3>
-        <p>
-          casa con pileta y acabados de lujo en la ciudad, excelente
-          oportunidad.
-        </p>
-        <p class="precio">U$S250.000</p>
-        <ul>
-          <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-          <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento"/></li>3
-          <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
-        </ul>
-        <div class="link"><a href="#">ver propiedad</a></div>
-      </article>
-    </main>
-    <section id="encuentra">
-      <h2>encuentra la casa de tus sueños</h2>
-      <p>
-        Llena el formulario de contacto y un asesor se pondra en contacto a la
-        brevedad
-      </p>
-      <div class="link"><a href="#">contáctanos</a></div>
-    </section>
-    <section>
-      <h2>nuestro blog</h2>
-      <article>
-        <img src="./images/blog1.jpg" alt="terraza" />
-        <h3>terraza en el techo de tu casa</h3>
-        <hr class="green-hr">
-        <p>Escrito el <span><date>20/10/2019</date></span> por: <span>Admin</span></p>
-        <p>
-          Consejos para construir una terraza en el techo de tu casa, con los
-          mejores materiales y ahorrando dinero
-        </p>
-      </article>
-      <hr>
-      <article>
-        <img src="./images/blog2.jpg" alt="decoracion hogar" />
-        <h3>guía para la decoracion de tu hogar</h3>
-        <hr class="green-hr">
-        <p>Escrito el <span><date>20/10/2019</date></span> por: <span>Admin</span></p>
-        <p>
-          Maximiza el espacio en tu hogar con esta guia, aprende a combinar
-          muebles y colores para darle vida a tu espacio
-        </p>
-      </article>
-      <hr>
-    </section>
-    <aside>
-      <div>
-        <h2>comentarios</h2>
-        <img src="./images/comilla.svg" alt="comillas" />
-        <blockquote>
-          El personal se comportó de una excelente forma, muy buena atención y la
-          casa que me ofrecieron cumple con todas mis espectativas.
-          <cite>- Juan Pérez</cite>
-        </blockquote>
-      </div>
-    </aside>
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Anuncios</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#anuncios">Anuncios</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-      <p>Todos los derechos reservados &copy;</p>
-    </footer>
-  </body>
+    </div>
+    <h1 class="header__h1">venta de casas y departamentos <br>exclusivos de lujo</h1>
+  </header>
+
+  <section id="nosotros">
+    <h2>mas sobre nosotros</h2>
+    <div>
+      <img src="./images/icono1.svg" alt="seguridad" />
+      <h3>seguridad</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, tempore
+        quasi! Quod quibusdam ratione, dolores amet et saepe consequatur
+        cumque quaerat architecto deleniti accusamus error dolorem tempora.
+        Culpa, magnam. Eum.
+      </p>
+    </div>
+    <div>
+      <img src="./images/icono2.svg" alt="dinero" />
+      <h3>el mejor precio</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+        adipisci optio omnis, culpa esse, nemo nobis, asperiores magnam
+        distinctio vitae quam modi nesciunt expedita rerum itaque ut ullam
+        dolore unde!
+      </p>
+    </div>
+    <div>
+      <img src="./images/icono3.svg" alt="tiempo" />
+      <h3>a tiempo</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam omnis
+        beatae nemo labore quas maiores, maxime aspernatur magni modi. Nihil
+        tempora vel soluta earum laborum suscipit quo, quos nemo repellendus!
+      </p>
+    </div>
+  </section>
+
+  <main id="anuncios">
+    <h2>casas y departamentos en venta</h2>
+    <article>
+      <img src="./images/anuncio1.jpg" alt="casa de lago" />
+      <h3>casa de lujo en el lago</h3>
+      <p>
+        casa de lago con excelente vista, acabados de lujo a un excelente
+        precio.
+      </p>
+      <p>U$S350.000</p>
+      <ul>
+        <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
+        <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
+        <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+      </ul>
+      <div><a href="#">ver propiedad</a></div>
+    </article>
+    <article>
+      <img src="./images/anuncio2.jpg" alt="casa de lujo" />
+      <h3>casa terminada de lujo</h3>
+      <p>
+        casa con diseño moderno, asi como tecnologia inteligente y amueblada.
+      </p>
+      <p>U$S275.000</p>
+      <ul>
+        <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
+        <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
+        <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+      </ul>
+      <div><a href="#">ver propiedad</a></div>
+    </article>
+    <article>
+      <img src="./images/anuncio3.jpg" alt="casa pileta" />
+      <h3>casa con pileta</h3>
+      <p>
+        casa con pileta y acabados de lujo en la ciudad, excelente
+        oportunidad.
+      </p>
+      <p>U$S250.000</p>
+      <ul>
+        <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
+        <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
+        <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+      </ul>
+      <div><a href="#">ver propiedad</a></div>
+    </article>
+  </main>
+
+  <section id="contacto">
+    <h2>encuentra la casa de tus sueños</h2>
+    <p>
+      Llena el formulario de contacto y un asesor se pondra en contacto a la
+      brevedad
+    </p>
+    <div><a href="#">contáctanos</a></div>
+  </section>
+
+  <section id="blog">
+    <h2>nuestro blog</h2>
+    <article>
+      <img src="./images/blog1.jpg" alt="terraza" />
+      <h3>terraza en el techo de tu casa</h3>
+      <hr>
+      <p>Escrito el <span>
+          <date>20/10/2019</date>
+        </span> por: <span>Admin</span></p>
+      <p>
+        Consejos para construir una terraza en el techo de tu casa, con los
+        mejores materiales y ahorrando dinero
+      </p>
+    </article>
+    <hr>
+    <article>
+      <img src="./images/blog2.jpg" alt="decoracion hogar" />
+      <h3>guía para la decoracion de tu hogar</h3>
+      <hr>
+      <p>Escrito el <span>
+          <date>20/10/2019</date>
+        </span> por: <span>Admin</span></p>
+      <p>
+        Maximiza el espacio en tu hogar con esta guia, aprende a combinar
+        muebles y colores para darle vida a tu espacio
+      </p>
+    </article>
+    <hr>
+  </section>
+
+  <aside>
+    <div>
+      <h2>comentarios</h2>
+      <img src="./images/comilla.svg" alt="comillas" />
+      <blockquote>
+        El personal se comportó de una excelente forma, muy buena atención y la
+        casa que me ofrecieron cumple con todas mis espectativas.
+        <br><cite>- Juan Pérez</cite>
+      </blockquote>
+    </div>
+  </aside>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#anuncios">Anuncios</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <p>Todos los derechos reservados &copy;</p>
+  </footer>
+
+</body>
+
 </html>
