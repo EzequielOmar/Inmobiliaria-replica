@@ -7,8 +7,15 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function handlerClick(e) {
-  if (e.target.matches("#menu-icon")) toggleMenu();
-  if (e.target.matches("#nav-res ul li a")) toggleMenu();
+  if (e.target.matches("#menu-icon div")) toggleMenu();
+  if (e.target.matches("#nav-res ul li a")) {
+    moveScroll(e);
+    toggleMenu();
+  }
+}
+
+function moveScroll(e) {
+  document.location.hash = "#" + e.target.name;
 }
 
 function toggleMenu() {
