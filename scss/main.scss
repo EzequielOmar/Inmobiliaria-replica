@@ -1,5 +1,22 @@
 @import "constants.scss";
 
+//boton naranja
+%link {
+  a {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $white;
+  }
+  background: $orange;
+  margin: 3%;
+  padding: 0.8rem;
+}
+%link:hover {
+  background: lighten($color: $orange, $amount: 15);
+  transition: background 1s;
+}
+
 body {
   margin: 0;
 }
@@ -93,94 +110,43 @@ body {
   }
 }
 
-/*
-//clases:
-.responsive {
-  background-color: rebeccapurple;
-}
-.menu {
-  position: absolute;
-  width: 100%;
-  justify-content: space-around;
-  img {
-    width: 55%;
-    height: 9vh;
-  }
-  nav {
-    display: none;
-  }
-}
-.text-white {
-  color: $white;
-}
-h1,
-h3 {
-  text-transform: capitalize;
-  margin: 2%;
-}
-h2 {
-  margin: 9% auto;
-  font-size: larger;
-  font-family: "Montserrat", sans-serif;
-}
-p {
-  margin: 3%;
-}
-//boton naranja
-.link {
-  background: $orange;
-  margin: 3%;
-  a {
-    font-size: 1.2rem;
+.nosotros {
+  &--h2 {
     text-transform: capitalize;
-    text-decoration: none;
+    font-size: 160%;
+    margin: 9% auto;
+    font-size: larger;
+    font-family: "Montserrat", sans-serif;
   }
-}
-.link:hover {
-  background: $ligth-orange;
-  transition: background 1s;
-}
-//mobile
-body {
-  margin: 0px;
-  header > div > nav,
-  footer > nav {
-    display: none;
-  }
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    height: 75vh;
-    background-image: url("../images/header.jpg");
-    background-size: cover;
-    h1 {
-      position: relative;
-      top: 20%;
-      margin: 6%;
-      font-size: 160%;
+  &__item {
+    padding: 5%;
+    h3 {
+      text-transform: capitalize;
+    }
+    img {
+      width: 30vw;
     }
   }
-  section,
-  main,
-  aside {
-    width: 100%;
-    text-align: center;
-    div {
-      padding: 5%;
-      img {
-        width: 25%;
-      }
-    }
+  width: 100%;
+  text-align: center;
+}
+
+.articulos {
+  &--h2 {
+    text-transform: capitalize;
+    font-size: 160%;
+    margin: 9% auto;
+    font-size: larger;
+    font-family: "Montserrat", sans-serif;
   }
-  //articulos main avisos
-  main > article {
-    background: $grey;
-    border: $dark-grey solid 0.1px;
-    margin: 10%;
+  &__art {
+    h3 {
+      text-transform: capitalize;
+    }
     img {
       width: 100%;
     }
-    .precio {
+    &--precio {
       margin: 0% 5%;
       text-align: left;
       color: $green;
@@ -195,6 +161,48 @@ body {
       align-items: center;
       padding: 0;
     }
+    div {
+      @extend %link;
+    }
+    div:hover {
+      @extend %link:hover;
+    }
+    background: $ligth-grey;
+    border: $grey solid 0.1px;
+    margin: 10%;
+  }
+  text-align: center;
+}
+
+/*
+//clases:
+h1,
+h3 {
+  text-transform: capitalize;
+  margin: 2%;
+}
+p {
+  margin: 3%;
+}
+//boton naranja
+
+//mobile
+body {
+  section,
+  main,
+  aside {
+    width: 100%;
+    text-align: center;
+    div {
+      padding: 5%;
+      img {
+        width: 25%;
+      }
+    }
+  }
+  //articulos main avisos
+  main > article {
+   
   }
   //section encuentra
   #encuentra {
