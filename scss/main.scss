@@ -1,26 +1,10 @@
 @import "constants.scss";
 
-//boton naranja
-%link {
-  a {
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    text-decoration: none;
-    color: $white;
-  }
-  background: $orange;
-  margin: 3%;
-  padding: 0.8rem;
-}
-%link:hover {
-  background: lighten($color: $orange, $amount: 15);
-  transition: background 1s;
-}
-
 body {
   margin: 0;
 }
 
+//Mobile first
 .header {
   &__top {
     &--logo {
@@ -112,11 +96,7 @@ body {
 
 .nosotros {
   &--h2 {
-    text-transform: capitalize;
-    font-size: 160%;
-    margin: 9% auto;
-    font-size: larger;
-    font-family: "Montserrat", sans-serif;
+    @extend %black-monserrat;
   }
   &__item {
     padding: 5%;
@@ -131,15 +111,16 @@ body {
   text-align: center;
 }
 
-.articulos {
+.anuncios {
   &--h2 {
-    text-transform: capitalize;
-    font-size: 160%;
-    margin: 9% auto;
-    font-size: larger;
-    font-family: "Montserrat", sans-serif;
+    @extend %black-monserrat;
   }
   &__art {
+    h3,
+    p,
+    ul {
+      margin: 0.5rem;
+    }
     h3 {
       text-transform: capitalize;
     }
@@ -147,7 +128,6 @@ body {
       width: 100%;
     }
     &--precio {
-      margin: 0% 5%;
       text-align: left;
       color: $green;
       font-weight: bold;
@@ -156,7 +136,6 @@ body {
     ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-evenly;
       align-items: center;
       padding: 0;
@@ -174,107 +153,95 @@ body {
   text-align: center;
 }
 
-/*
-//clases:
-h1,
-h3 {
-  text-transform: capitalize;
-  margin: 2%;
+.contacto {
+  &--h2 {
+    text-transform: capitalize;
+  }
+  h2,
+  p {
+    color: $white;
+    margin: 0.4rem;
+  }
+  div {
+    @extend %link;
+  }
+  div:hover {
+    @extend %link:hover;
+  }
+  height: 35vh;
+  background-image: url("../images/encuentra.jpg");
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-end;
 }
-p {
-  margin: 3%;
-}
-//boton naranja
 
-//mobile
-body {
-  section,
-  main,
-  aside {
-    width: 100%;
-    text-align: center;
-    div {
-      padding: 5%;
-      img {
-        width: 25%;
-      }
-    }
+.blog {
+  &--h2 {
+    @extend %black-monserrat;
   }
-  //articulos main avisos
-  main > article {
-   
-  }
-  //section encuentra
-  #encuentra {
-    background-image: url("../images/encuentra.jpg");
-    background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: unset;
-    div {
-      padding: 3%;
-      width: 40%;
-      text-align: center;
-    }
-  }
-  //articulos blog
-  section > article {
+  &__art {
     img {
-      width: 97%;
+      width: 100%;
     }
-    span {
-      color: $orange;
+    h3,
+    p {
+      margin: 0.5rem;
     }
-    .green-hr {
+    hr {
       background: $green;
-      height: 0.5rem;
+      height: 0.35rem;
+      margin: 1.2rem auto;
       width: 35%;
       border-radius: 25px;
       border: none;
     }
-  }
-  aside {
-    display: inline;
-    padding: 3%;
-    div {
-      margin: auto;
-      padding: 0.5%;
-      background: $green;
-      border-radius: 20px;
-      width: 90%;
-      img {
-        margin: 2%;
-        width: 15%;
-        float: left;
-      }
+    span {
+      color: $orange;
     }
+    margin: 0 0 3rem 0;
   }
-  footer {
-    background: $dark-grey;
-    height: 8vh;
+  text-align: center;
+}
+
+.comentario {
+  &--h2 {
+    @extend %black-monserrat;
+  }
+  &__com {
+    img {
+      width: 16vw;
+    }
+    blockquote {
+      cite {
+        float: right;
+        font-weight: bold;
+      }
+      margin: 0.5rem;
+    }
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    background: $green;
+    border-radius: 20px;
+    width: 90%;
+    text-align: start;
+    margin: auto;
+  }
+  text-align: center;
+  margin: 0 0 3rem 0;
+}
+
+.footer {
+  background: $dark-grey;
+  height: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  nav {
+    display: none;
+  }
+  p{
+    color: $white;
+    margin: 3vw;
   }
 }
-//Tablet
-@media only screen and (min-width: 768px) {
-  body {
-    header > div > nav,
-    footer > nav {
-      display: block;
-    }
-    .menu {
-      img {
-        display: none;
-      }
-    }
-  }
-}
-//desktop
-//@media only screen and (min-width: 992px) {
-//  body {
-//  }
-//}
-*/
