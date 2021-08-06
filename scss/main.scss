@@ -36,14 +36,13 @@ body {
     align-items: center;
   }
   &__h1 {
-    text-transform: capitalize;
-    font-size: 160%;
-    color: $white;
-    margin: 40vh 6% 6% 6%;
+    @extend %white-serif;
+    margin: 38vh 6% auto 6%;
   }
   height: 75vh;
   background-image: url("../images/header.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .res {
@@ -149,13 +148,14 @@ body {
     background: $ligth-grey;
     border: $grey solid 0.1px;
     margin: 10%;
+    border-radius: 1px;
   }
   text-align: center;
 }
 
 .contacto {
   &--h2 {
-    text-transform: capitalize;
+    @extend %white-serif;
   }
   h2,
   p {
@@ -218,7 +218,7 @@ body {
         float: right;
         font-weight: bold;
       }
-      margin: 0.5rem;
+      margin: 1rem;
     }
     display: flex;
     background: $green;
