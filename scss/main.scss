@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  position: relative;
 }
 
 //Mobile first
@@ -9,7 +10,7 @@ body {
   &__top {
     &--logo {
       margin: 0.5rem;
-      height: 6.5vh;
+      height: 3rem;
     }
     &--icon {
       cursor: pointer;
@@ -37,7 +38,7 @@ body {
   }
   &__h1 {
     @extend %white-serif;
-    margin: 38vh 6% auto 6%;
+    margin: 40vh 0 0 1rem;
   }
   height: 75vh;
   background-image: url("../images/header.jpg");
@@ -61,7 +62,7 @@ body {
     display: block;
     position: absolute;
     text-align: center;
-    top: 9vh;
+    top: 3.5rem;
     width: 100%;
     outline: 1px solid $grey;
     ul {
@@ -97,13 +98,12 @@ body {
   &--h2 {
     @extend %black-monserrat;
   }
-  &__item {
-    padding: 5%;
-    h3 {
-      text-transform: capitalize;
-    }
-    img {
-      width: 30vw;
+  &__div {
+    &--item {
+      padding: 5%;
+      h3 {
+        text-transform: capitalize;
+      }
     }
   }
   width: 100%;
@@ -114,41 +114,43 @@ body {
   &--h2 {
     @extend %black-monserrat;
   }
-  &__art {
-    h3,
-    p,
-    ul {
-      margin: 0.5rem;
+  &__div {
+    &__art {
+      h3,
+      p,
+      ul {
+        margin: 0.5rem;
+      }
+      h3 {
+        text-transform: capitalize;
+      }
+      img {
+        width: 100%;
+      }
+      &--precio {
+        text-align: left;
+        color: $green;
+        font-weight: bold;
+        font-size: large;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+      }
+      div {
+        @extend %link;
+      }
+      div:hover {
+        @extend %link:hover;
+      }
+      background: $ligth-grey;
+      border: $grey solid 0.1px;
+      margin: 10%;
+      border-radius: 1px;
     }
-    h3 {
-      text-transform: capitalize;
-    }
-    img {
-      width: 100%;
-    }
-    &--precio {
-      text-align: left;
-      color: $green;
-      font-weight: bold;
-      font-size: large;
-    }
-    ul {
-      list-style: none;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 0;
-    }
-    div {
-      @extend %link;
-    }
-    div:hover {
-      @extend %link:hover;
-    }
-    background: $ligth-grey;
-    border: $grey solid 0.1px;
-    margin: 10%;
-    border-radius: 1px;
   }
   text-align: center;
 }
@@ -168,7 +170,7 @@ body {
   div:hover {
     @extend %link:hover;
   }
-  height: 35vh;
+  height: 15rem;
   background-image: url("../images/encuentra.jpg");
   background-size: cover;
   display: flex;
@@ -233,15 +235,68 @@ body {
 
 .footer {
   background: $dark-grey;
-  height: 8vh;
+  height: 3rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   nav {
     display: none;
   }
-  p{
+  p {
     color: $white;
-    margin: 3vw;
+    margin: 1rem;
   }
+}
+
+/*back-to-top-button*/
+:root {
+  scroll-behavior: smooth;
+} /*smooth scrollins on back-to-top button*/
+.scroll-top {
+  position: absolute;
+  top: 120vh;
+  bottom: 2rem;
+  right: 2rem;
+}
+.scroll-top__link {
+  position: sticky;
+  top: 85.5vh;
+  background-color: $grey;
+  color: black;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-weight: 700;
+  opacity: 0.3;
+}
+.scroll-top__link:hover {
+  opacity: 0.7;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .nosotros {
+    &__div {
+      &--item {
+        padding: 1%;
+        img {
+          width: 5rem;
+        }
+        width: 33%;
+      }
+      display: flex;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }
