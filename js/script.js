@@ -7,10 +7,11 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function handlerClick(e) {
-  if (e.target.matches("#menu-icon div")) toggleMenu();
+  if (e.target.matches("#responsive-div div div")) toggleMenu();
   if (e.target.matches("#nav-res ul li a")) {
     moveScroll(e);
-    toggleMenu();
+    if (document.getElementById("responsive-div").classList.contains("res"))
+      toggleMenu();
   }
 }
 
@@ -19,6 +20,6 @@ function moveScroll(e) {
 }
 
 function toggleMenu() {
-  let $menuIcon = document.getElementById("menu-icon");
-  $menuIcon.parentNode.classList.toggle("res");
+  let $div = document.getElementById("responsive-div");
+  $div.classList.toggle("res");
 }

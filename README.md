@@ -19,5 +19,5 @@ The purpose of this project is to build a simple site, fully responsible on all 
 <img src="/modelo/inmobiliaria.png" alt="modelo del sitio a reconstruir"/>
 <h2>About this project</h2>
 <p>
-This was made with educational purposes, the original design and images was taken from an Udemy  curse. https://www.udemy.com/
+This was made with educational purposes, the original design and images was taken from an Udemy course. https://www.udemy.com/
 </p>

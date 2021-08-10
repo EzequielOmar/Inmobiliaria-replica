@@ -4,6 +4,11 @@ body {
   margin: 0;
   position: relative;
 }
+h3,
+p {
+  font-family: sans-serif;
+  line-height: 125%;
+}
 
 //Mobile first
 .header {
@@ -31,6 +36,9 @@ body {
     }
     &--nav {
       display: none;
+      a {
+        @extend %white-serif;
+      }
     }
     display: flex;
     justify-content: space-evenly;
@@ -38,8 +46,13 @@ body {
   }
   &__h1 {
     @extend %white-serif;
-    margin: 40vh 0 0 1rem;
+    font-size: 1.7rem;
+    margin: auto auto 4rem 1.5rem;
+    position: absolute;
+    bottom: 0;
+    line-height: 150%;
   }
+  position: relative;
   height: 75vh;
   background-image: url("../images/header.jpg");
   background-size: cover;
@@ -116,35 +129,37 @@ body {
   }
   &__div {
     &__art {
-      h3,
-      p,
-      ul {
-        margin: 0.5rem;
-      }
-      h3 {
-        text-transform: capitalize;
-      }
-      img {
+      > img {
         width: 100%;
       }
-      &--precio {
-        text-align: left;
-        color: $green;
-        font-weight: bold;
-        font-size: large;
-      }
-      ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 0;
-      }
-      div {
-        @extend %link;
-      }
-      div:hover {
-        @extend %link:hover;
+      &--div {
+        h3,
+        p,
+        ul {
+          margin: 0.5rem;
+        }
+        h3 {
+          text-transform: capitalize;
+        }
+        p:nth-child(3) {
+          text-align: left;
+          color: $green;
+          font-weight: bold;
+          font-size: large;
+        }
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 0;
+        }
+        div {
+          @extend %link;
+        }
+        div:hover {
+          @extend %link:hover;
+        }
       }
       background: $ligth-grey;
       border: $grey solid 0.1px;
@@ -158,11 +173,13 @@ body {
 .contacto {
   &--h2 {
     @extend %white-serif;
+    font-size: 1.7rem;
   }
   h2,
   p {
     color: $white;
     margin: 0.4rem;
+    width: 100%;
   }
   div {
     @extend %link;
@@ -184,7 +201,7 @@ body {
     @extend %black-monserrat;
   }
   &__art {
-    img {
+    > img {
       width: 100%;
     }
     h3,
@@ -213,16 +230,20 @@ body {
   }
   &__com {
     img {
-      width: 16vw;
+      margin: 0.5rem 0 0 0.5rem;
     }
     blockquote {
       cite {
         float: right;
         font-weight: bold;
       }
+      @extend %white-serif;
       margin: 1rem;
+      line-height: 175%;
+      margin: 1rem 1rem 1rem 0rem;
     }
     display: flex;
+    align-items: baseline;
     background: $green;
     border-radius: 20px;
     width: 90%;
@@ -234,18 +255,27 @@ body {
 }
 
 .footer {
-  background: $dark-grey;
-  height: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   nav {
     display: none;
+    ul {
+      margin: 0;
+    }
+    a {
+      @extend %white-serif;
+      text-decoration: none;
+    }
   }
   p {
     color: $white;
     margin: 1rem;
   }
+  margin-top: 1rem;
+  background: $dark-grey;
+  height: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*back-to-top-button*/
@@ -280,23 +310,121 @@ body {
       &--item {
         padding: 1%;
         img {
-          width: 5rem;
+          width: 70px;
         }
         width: 33%;
       }
       display: flex;
     }
   }
+
+  .anuncios {
+    &__div {
+      &__art {
+        > img {
+          width: 50%;
+        }
+        display: flex;
+      }
+    }
+  }
+
+  .blog {
+    &__art {
+      > img {
+        width: 50%;
+      }
+      &--div {
+        align-self: center;
+      }
+      display: flex;
+    }
+  }
+
+  .comentario {
+    &__com {
+      width: 80%;
+    }
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .anuncios {
+    &__div {
+      &__art {
+        > img {
+          width: 100%;
+        }
+        width: 33%;
+        display: block;
+        margin: 1rem;
+      }
+      margin-bottom: 2rem;
+      display: flex;
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-}
+  .header {
+    &__top {
+      &--icon {
+        display: none;
+      }
+      &--nav {
+        display: block;
+        ul {
+          list-style: none;
+          display: flex;
+          li {
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+  }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+  .anuncios {
+    &__div {
+      &__art {
+        margin: 3rem;
+      }
+    }
+  }
+
+  .footer {
+    nav {
+      display: block;
+      ul {
+        list-style: none;
+        display: flex;
+        li {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+
+  .blog {
+    &__art {
+      > img {
+        margin: 1rem;
+        height: 10rem;
+      }
+      margin-bottom: 0;
+    }
+    width: 59%;
+    display: inline-block;
+  }
+
+  .comentario {
+    float: right;
+    width: 40%;
+    blockquote {
+      font-size: large;
+      padding: 2rem 0;
+    }
+  }
 }

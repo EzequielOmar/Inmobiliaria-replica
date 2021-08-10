@@ -13,9 +13,9 @@
 <body>
 
   <header class="header">
-    <div class="header__top">
+    <div class="header__top" id="responsive-div">
       <img class="header__top--logo" src="./images/logo.svg" alt="logo" />
-      <div class="header__top--icon" id="menu-icon">
+      <div class="header__top--icon">
         <div></div>
         <div></div>
         <div></div>
@@ -70,45 +70,51 @@
     <div class="anuncios__div">
       <article class="anuncios__div__art">
         <img src="./images/anuncio1.jpg" alt="casa de lago" />
-        <h3>casa de lujo en el lago</h3>
-        <p>
-          Casa de lago con excelente vista, acabados de lujo a un excelente precio.
-        </p>
-        <p class="anuncios__div__art--precio">U$S350.000</p>
-        <ul>
-          <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-          <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
-          <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
-        </ul>
-        <div><a href="#">ver propiedad</a></div>
+        <div class="anuncios__div__art--div">
+          <h3>casa de lujo en el lago</h3>
+          <p>
+            Casa de lago con excelente vista, acabados de lujo a un excelente precio.
+          </p>
+          <p>U$S350.000</p>
+          <ul>
+            <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
+            <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
+            <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+          </ul>
+          <div><a href="#">ver propiedad</a></div>
+        </div>
       </article>
       <article class="anuncios__div__art">
         <img src="./images/anuncio2.jpg" alt="casa de lujo" />
-        <h3>casa terminada de lujo</h3>
-        <p>
-          Casa con diseño moderno, asi como tecnología inteligente y amueblada.
-        </p>
-        <p class="anuncios__div__art--precio">U$S275.000</p>
-        <ul>
-          <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-          <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
-          <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
-        </ul>
-        <div><a href="#">ver propiedad</a></div>
+        <div class="anuncios__div__art--div">
+          <h3>casa terminada de lujo</h3>
+          <p>
+            Casa con diseño moderno, asi como tecnología inteligente y amueblada.
+          </p>
+          <p>U$S275.000</p>
+          <ul>
+            <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
+            <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
+            <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+          </ul>
+          <div><a href="#">ver propiedad</a></div>
+        </div>
       </article>
       <article class="anuncios__div__art">
         <img src="./images/anuncio3.jpg" alt="casa pileta" />
-        <h3>casa con pileta</h3>
-        <p>
-          Casa con pileta y acabados de lujo en la ciudad, excelente oportunidad.
-        </p>
-        <p class="anuncios__div__art--precio">U$S250.000</p>
-        <ul>
-          <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-          <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
-          <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
-        </ul>
-        <div><a href="#">ver propiedad</a></div>
+        <div class="anuncios__div__art--div">
+          <h3>casa con pileta</h3>
+          <p>
+            Casa con pileta y acabados de lujo en la ciudad, excelente oportunidad.
+          </p>
+          <p>U$S250.000</p>
+          <ul>
+            <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
+            <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
+            <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+          </ul>
+          <div><a href="#">ver propiedad</a></div>
+        </div>
       </article>
     </div>
   </main>
@@ -128,27 +134,31 @@
     <h2 class="blog--h2">nuestro blog</h2>
     <article class="blog__art">
       <img src="./images/blog1.jpg" alt="terraza" />
-      <h3>Terraza en el techo de tu casa</h3>
-      <hr>
-      <p>Escrito el <span>
-          <date>20/10/2019</date>
-        </span> por: <span>Admin</span></p>
-      <p>
-        Consejos para construir una terraza en el techo de tu casa, con los
-        mejores materiales y ahorrando dinero.
-      </p>
+      <div class="blog__art--div">
+        <h3>Terraza en el techo de tu casa</h3>
+        <hr>
+        <p>Escrito el <span>
+            <date>20/10/2019</date>
+          </span> por: <span>Admin</span></p>
+        <p>
+          Consejos para construir una terraza en el techo de tu casa, con los
+          mejores materiales y ahorrando dinero.
+        </p>
+      </div>
     </article>
     <article class="blog__art">
       <img src="./images/blog2.jpg" alt="decoracion hogar" />
-      <h3>Guía para la decoracion de tu hogar</h3>
-      <hr>
-      <p>Escrito el <span>
-          <date>20/10/2019</date>
-        </span> por: <span>Admin</span></p>
-      <p>
-        Maximiza el espacio en tu hogar con esta guia, aprende a combinar
-        muebles y colores para darle vida a tu espacio.
-      </p>
+      <div class="blog__art--div">
+        <h3>Guía para la decoracion de tu hogar</h3>
+        <hr>
+        <p>Escrito el <span>
+            <date>20/10/2019</date>
+          </span> por: <span>Admin</span></p>
+        <p>
+          Maximiza el espacio en tu hogar con esta guia, aprende a combinar
+          muebles y colores para darle vida a tu espacio.
+        </p>
+      </div>
     </article>
   </section>
 
