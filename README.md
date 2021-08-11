@@ -14,7 +14,16 @@ The purpose of this project is to build a simple site, fully responsible on all 
   **Fully responsive designe, mobile fisrt approach**<br>
   **Plain js for a few user interactions**<br>
   **Properly sized images**<br>
+  **Use of schemas, so the website can shor rich snippets**<br>
 </p>
+<h2>Lighthouse test passed!</h2>
+<p>
+Although the performance score may change according to the cache configuration, I think that lighthouse makes a complete review of the colors, semantics, images, among others, which are worth reviewing in order to make the site accesible and lightweight. 
+</p>
+<img src="/modelo/lighthouse-score.png" alt="lighthouse score image"/>
+
+
+
 <h2>Image to reply</h2>
 <img src="/modelo/inmobiliaria.png" alt="modelo del sitio a reconstruir"/>
 <h2>About this project</h2>
