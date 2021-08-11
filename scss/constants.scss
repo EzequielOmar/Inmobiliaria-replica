@@ -1,14 +1,10 @@
-//colors
-$white: #f5f5f5;
-$ligth-grey: #efefef;
-$grey: #d1d1d1;
-$dark-grey: #242424;
-$green: #60b108;
-$dark-green: #0e1a0e78;
-$orange: #ff9100;
 //fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-//clases estaticas
+//colors
+$white: #f5f5f5;
+$grey: #d1d1d1;
+$green: #3d7400;
+//clases estaticas (no compilan en el css)
 //tipografias
 %white-serif {
   text-transform: capitalize;
@@ -22,20 +18,19 @@ $orange: #ff9100;
   font-size: larger;
   font-family: "Montserrat", sans-serif;
 }
-//boton naranja
+//boton
 %link {
   a {
-    font-size: 1.2rem;
-    text-transform: capitalize;
+    @extend %white-serif;
+    font-size: 1.4rem;
     text-decoration: none;
-    color: $white;
   }
-  background: $orange;
+  background: $green;
   margin: 1rem;
   padding: 0.8rem;
   border-radius: 2px;
 }
 %link:hover {
-  background: lighten($color: $orange, $amount: 30);
+  background: lighten($color: $green, $amount: 30);
   transition: background 2s;
 }

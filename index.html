@@ -3,25 +3,36 @@
 
 <head>
   <meta charset="UTF-8" />
+  <title>Bienes Raíces</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
+  <link rel="manifest" href="favicon//site.webmanifest">
+  <link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="Bienes Raices">
+  <meta name="description" content="A fake real estate business, to learn html, sass, and js.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, SASS">
+  <meta name="author" content="EzequielOmar">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bienes Raíces</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <script src="js/script.js"></script>
+  <link defer rel="stylesheet" href="css/main.css" />
+  <script defer src="js/script.js"></script>
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/LocalBusiness">
 
-  <header class="header">
-    <div class="header__top" id="responsive-div">
-      <img class="header__top--logo" src="./images/logo.svg" alt="logo" />
+  <header class="header" id="responsive-div">
+    <div class="header__top">
+      <img itemprop="logo" class="header__top--logo" src="./images/logo.svg" width="328px" height="54px" alt="logo" />
       <div class="header__top--icon">
         <div></div>
         <div></div>
         <div></div>
       </div>
-      <nav class="header__top--nav" id="nav-res">
-        <ul>
+      <nav itemscope itemtype="https://schema.org/RealEstateListing" class="header__top--nav" id="nav-res">
+        <ul itemprop="breadcrumb">
           <li><a name="nosotros">Nosotros</a></li>
           <li><a name="anuncios">Anuncios</a></li>
           <li><a name="blog">Blog</a></li>
@@ -29,7 +40,7 @@
         </ul>
       </nav>
     </div>
-    <h1 class="header__h1">venta de casas y departamentos <br>exclusivos de lujo</h1>
+    <h1 itemprop="slogan" class="header__h1">venta de casas y departamentos <br>exclusivos de lujo</h1>
   </header>
 
   <section class="nosotros">
@@ -37,81 +48,93 @@
     <h2 class="nosotros--h2">mas sobre nosotros</h2>
     <div class="nosotros__div">
       <div class="nosotros__div--item">
-        <img src="./images/icono1.svg" alt="seguridad" />
+        <img src="./images/icono1.svg" width="123" height="93" alt="seguridad" />
         <h3>seguridad</h3>
-        <p>
+        <p itemprop="award">
           Confiabilidad y experiencia. Mas de 50 años en el mercado lo comprueban.
           Somos una empresa familiar y nuestros clientes son nuestra familia, por eso
           ponemos su seguridad primero.
         </p>
       </div>
       <div class="nosotros__div--item">
-        <img src="./images/icono2.svg" alt="dinero" />
+        <img src="./images/icono2.svg" width="119.306" height="93" alt="dinero" />
         <h3>precio</h3>
-        <p>
-          Tenemos las tarifas mas competitivas del mercado. Y una amplia variedad de
-          propiedades de lujo.
+        <p itemprop="paymentAccepted">
+          Tenemos las tarifas mas competitivas del mercado. Nos adaptamos a sus necesidades.
         </p>
       </div>
       <div class="nosotros__div--item">
-        <img src="./images/icono3.svg" alt="tiempo" />
+        <img src="./images/icono3.svg" width="93" height="93" alt="tiempo" />
         <h3>tiempo</h3>
-        <p>
+        <p itemprop="openingHours">
           Nos acompaña un equipo de profesionales ansiosos por resolver
-          todas sus inquietudes, y ayudarle a encontrar el lugar ideal para usted.
+          todas sus inquietudes, y ayudarle a encontrar el lugar ideal para usted ¡Siempre a disposición!
         </p>
       </div>
     </div>
   </section>
 
-  <main class="anuncios">
+  <main itemprop="mainEntityOfPage" itemscope itemtype="https://schema.org/RealEstateListing" class="anuncios">
     <a name="anuncios" id="anuncios"></a>
-    <h2 class="anuncios--h2">casas y departamentos en venta</h2>
-    <div class="anuncios__div">
-      <article class="anuncios__div__art">
-        <img src="./images/anuncio1.jpg" alt="casa de lago" />
+    <h2 itemscope itemtype="https://schema.org/businessFunction" class="anuncios--h2">
+      casas y departamentos en venta
+    </h2>
+    <div itemprop="offers" class="anuncios__div">
+      <article itemscope itemtype="https://schema.org/House" class="anuncios__div__art">
+        <img itemprop="photo" src="./images/anuncio1.jpg" width="440" height="330" alt="casa de lago" />
         <div class="anuncios__div__art--div">
-          <h3>casa de lujo en el lago</h3>
-          <p>
+          <h3 itemprop="name">casa de lujo en el lago</h3>
+          <p itemprop="description">
             Casa de lago con excelente vista, acabados de lujo a un excelente precio.
           </p>
           <p>U$S350.000</p>
           <ul>
-            <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-            <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
-            <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+            <li itemprop="numberOfBathroomsTotal"><img src="./images/icono_wc.svg" width="34" height="37" alt="wc" />
+              3
+            </li>
+            <li><img src="./images/icono_estacionamiento.svg" width="40" height="31" alt="estacionamiento" />
+              3
+            </li>
+            <li itemprop="numberOfRooms"><img src="./images/icono_dormitorio.svg" width="46" height="31"
+                alt="dormitorio" />
+              4
+            </li>
           </ul>
-          <div><a href="#">ver propiedad</a></div>
+          <div><a itemprop="url" href="#">ver propiedad</a></div>
         </div>
       </article>
-      <article class="anuncios__div__art">
-        <img src="./images/anuncio2.jpg" alt="casa de lujo" />
+      <article itemscope itemtype="https://schema.org/House" class="anuncios__div__art">
+        <img itemprop="photo" src="./images/anuncio2.jpg" width="440" height="330" alt="casa de lujo" />
         <div class="anuncios__div__art--div">
-          <h3>casa terminada de lujo</h3>
-          <p>
+          <h3 itemprop="name">casa terminada de lujo</h3>
+          <p itemprop="description">
             Casa con diseño moderno, asi como tecnología inteligente y amueblada.
           </p>
           <p>U$S275.000</p>
           <ul>
-            <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-            <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
-            <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+            <li itemprop="numberOfBathroomsTotal"><img src="./images/icono_wc.svg" width="34" height="37" alt="wc" />3
+            </li>
+            <li><img src="./images/icono_estacionamiento.svg" width="40" height="31" alt="estacionamiento" />3</li>
+            <li itemprop="numberOfRooms"><img src="./images/icono_dormitorio.svg" width="46" height="31"
+                alt="dormitorio" />4</li>
           </ul>
           <div><a href="#">ver propiedad</a></div>
         </div>
       </article>
-      <article class="anuncios__div__art">
-        <img src="./images/anuncio3.jpg" alt="casa pileta" />
+      <article itemscope itemtype="https://schema.org/House" class="anuncios__div__art">
+        <img itemprop="photo" src="./images/anuncio3.jpg" width="440" height="330" alt="casa pileta" />
         <div class="anuncios__div__art--div">
-          <h3>casa con pileta</h3>
-          <p>
+          <h3 itemprop="name">casa con pileta</h3>
+          <p itemprop="description">
             Casa con pileta y acabados de lujo en la ciudad, excelente oportunidad.
           </p>
           <p>U$S250.000</p>
           <ul>
-            <li><img src="./images/icono_wc.svg" alt="wc" /></li>3
-            <li><img src="./images/icono_estacionamiento.svg" alt="estacionamiento" /></li>3
-            <li><img src="./images/icono_dormitorio.svg" alt="dormitorio" /></li>4
+            <li itemprop="numberOfBathroomsTotal"><img src="./images/icono_wc.svg" width="34" height="37" alt="wc" />3
+            </li>
+            <li><img src="./images/icono_estacionamiento.svg" width="40" height="31" alt="estacionamiento" />3</li>
+            <li itemprop="numberOfRooms"><img src="./images/icono_dormitorio.svg" width="46" height="31"
+                alt="dormitorio" />4</li>
           </ul>
           <div><a href="#">ver propiedad</a></div>
         </div>
@@ -119,7 +142,7 @@
     </div>
   </main>
 
-  <section class="contacto">
+  <section itemprop="contactPoint" class="contacto">
     <a name="contacto" id="contacto"></a>
     <h2 class="contacto--h2">encuentra la casa de tus sueños</h2>
     <p class="contacto--p">
@@ -129,32 +152,32 @@
     <div><a href="#">contáctanos</a></div>
   </section>
 
-  <section class="blog">
+  <section itemscope itemtype="https://schema.org/blogPosts" class="blog">
     <a name="blog" id="blog"></a>
     <h2 class="blog--h2">nuestro blog</h2>
-    <article class="blog__art">
-      <img src="./images/blog1.jpg" alt="terraza" />
+    <article itemscope itemtype="https://schema.org/BlogPosting" class="blog__art">
+      <img itemprop="sharedContent" src="./images/blog1.jpg" width="480" height="360" alt="terraza" />
       <div class="blog__art--div">
-        <h3>Terraza en el techo de tu casa</h3>
+        <h3 itemprop="headline">Terraza en el techo de tu casa</h3>
         <hr>
         <p>Escrito el <span>
-            <date>20/10/2019</date>
-          </span> por: <span>Admin</span></p>
-        <p>
+            <date itemprop="dateCreated">20/10/2019</date>
+          </span> por: <span itemprop="editor">Admin</span></p>
+        <p itemprop="about">
           Consejos para construir una terraza en el techo de tu casa, con los
           mejores materiales y ahorrando dinero.
         </p>
       </div>
     </article>
-    <article class="blog__art">
-      <img src="./images/blog2.jpg" alt="decoracion hogar" />
+    <article itemscope itemtype="https://schema.org/BlogPosting" class="blog__art">
+      <img itemprop="sharedContent" src="./images/blog2.jpg" width="480" height="360" alt="decoracion hogar" />
       <div class="blog__art--div">
-        <h3>Guía para la decoracion de tu hogar</h3>
+        <h3 itemprop="headline">Guía para la decoracion de tu hogar</h3>
         <hr>
         <p>Escrito el <span>
-            <date>20/10/2019</date>
-          </span> por: <span>Admin</span></p>
-        <p>
+            <date itemprop="dateCreated">20/10/2019</date>
+          </span> por: <span itemprop="editor">Admin</span></p>
+        <p itemprop="about">
           Maximiza el espacio en tu hogar con esta guia, aprende a combinar
           muebles y colores para darle vida a tu espacio.
         </p>
@@ -165,7 +188,7 @@
   <aside class="comentario">
     <h2 class="comentario--h2">comentarios</h2>
     <div class="comentario__com">
-      <img src="./images/comilla.svg" alt="comillas" />
+      <img src="./images/comilla.svg" width="52.5px" height="48px" alt="comillas" />
       <blockquote>
         El personal se comportó de una excelente forma, muy buena atención y la
         casa que me ofrecieron cumple con todas mis espectativas.
