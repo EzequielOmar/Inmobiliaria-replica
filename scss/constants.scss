@@ -31,6 +31,6 @@ $green: #3d7400;
   border-radius: 2px;
 }
 %link:hover {
-  background: lighten($color: $green, $amount: 30);
+  background: lighten($color: $green, $amount: 20);
   transition: background 2s;
 }
